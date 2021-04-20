@@ -17,6 +17,7 @@ class Employee
         
     public:
         Comparator* C; 
+        Employee();
         Employee(std::string name, int id , std::string position );
         std::string getName();
         int getId();
@@ -24,6 +25,7 @@ class Employee
         bool equals(Employee e);
         std::string str();
         int compareId(Employee e);
+        
 };
 
 #endif

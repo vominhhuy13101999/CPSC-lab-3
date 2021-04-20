@@ -4,11 +4,14 @@
 #include <vector>
 #include "employee.h"
 #include "tree.h"
+#include "TreeNode.h"
+#include "TreeNodeE.h"
 // using namespace std;
-class Treeimpl : public Tree
+class Treeimpl : public Tree<TreeNode<Employee>, Employee>
 {
 
     public:
+        TreeNode<Employee>* head;
         void addRoot(Employee e);
         void clear();
         void addDirectReport(Employee manager, Employee newPerson);

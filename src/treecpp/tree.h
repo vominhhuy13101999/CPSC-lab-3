@@ -4,16 +4,18 @@
 #include <vector>
 #include "employee.h"
 #include "TreeNodeE.h"
+
 // using namespace std;
+template<typename N,typename E>
 class Tree
 {
 
     public:
-        TreeNodeE* head;
+        N<E>* head;
         int len;
         void clear();
-        void addchild(Employee manager, Employee newPerson);
-        void removeEmployee(Employee firedPerson);
+        void addchild(E manager, E newPerson);
+        void removeEmployee(E firedPerson);
         void DFS(); 
         void BFS();
 };

@@ -4,6 +4,13 @@
 
 using namespace std;
 
+
+Employee::Employee(){
+     (this->name)= "";
+     (this->id)=0;
+     (this->position)="";
+
+}
 Employee::Employee(string name, int id , string position ){
     this-> name=name;
     this -> id=id;

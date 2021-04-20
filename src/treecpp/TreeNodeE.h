@@ -20,9 +20,10 @@ class TreeNodeE : public TreeNode<Employee>
         std::vector<TreeNodeE>* children;
         // Comparator* C;
         // TreeNodeE();
-        TreeNodeE(Employee data) ;
+        TreeNodeE( Employee data) ;
         void addChildren(TreeNodeE N);
         void remove(TreeNodeE N);
+        void print();
 };
 
 #endif
