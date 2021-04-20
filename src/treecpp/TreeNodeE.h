@@ -11,7 +11,7 @@
 
 // #include "Comparator.h"
 // using namespace std;
-// class Employee;
+class Employee;
 class TreeNodeE : public TreeNode<Employee>
 {
 
@@ -20,7 +20,7 @@ class TreeNodeE : public TreeNode<Employee>
         std::vector<TreeNodeE>* children;
         // Comparator* C;
         // TreeNodeE();
-        TreeNodeE(Employee data) ;
+        TreeNodeE( Employee data) ;
         void addChildren(TreeNodeE N);
         void remove(TreeNodeE N);
 };

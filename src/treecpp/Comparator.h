@@ -17,7 +17,7 @@
 class Comparator
 {
     public:
-        int compare(Employee* a, Employee* b ,std::equal_to<int> cmp= std::equal_to<int>{}) const{
+        int compare(Employee* a, Employee* b ,std::greater<int> cmp= std::greater<int>{}) const{
             // std::cout<<a->getId()<<std::endl;
             // std::cout<<b->getId()<<std::endl;
             return cmp(a->getId(),b->getId());

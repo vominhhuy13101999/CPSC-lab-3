@@ -14,7 +14,7 @@ int main(){
     cout<<e.str()<<endl;
 
 
-    Employee h("Bao",215197,"manager");
+    Employee h("Bao",1,"manager");
     cout<<e.compareId(h)<<endl;
     // fill the org chart
     // show it depth first
@@ -23,6 +23,6 @@ int main(){
     // and remove some people
     // show it depth first
     // show breadth first
-    TreeNodeE tn(e);
+    // TreeNodeE tn(e);
     // cout<<tn.E.str()<<endl;
 }

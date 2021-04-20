@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Comparator.h"
 #include "employee.h"
+#include "TreeNode.h"
 
 using namespace std;
 
@@ -12,14 +13,21 @@ using namespace std;
 //   this->children=a;
 
 // }
-TreeNodeE::TreeNodeE(Employee E){
-      this->data = E;
+
+
+
+
+
+
+TreeNodeE::TreeNodeE(  Employee data): TreeNode<Employee>(data),data(data){
+      // this->data = data;
       // vector<TreeNodeE> a;
       this->children= new vector<TreeNodeE>();}
 
 void TreeNodeE::addChildren(TreeNodeE N){
     this->children->push_back(N);
 }
+
 
 void TreeNodeE::remove(TreeNodeE N){
     int c=0;
@@ -28,6 +36,7 @@ void TreeNodeE::remove(TreeNodeE N){
       
       if (a[i].data.equals(N.data)){
         c=i;
+        break;
       }
     }
     
