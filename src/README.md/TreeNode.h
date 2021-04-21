@@ -11,12 +11,16 @@ template<typename E>
     {
 
         public:
-            // E data;
+            E data;
             // std::vector<TreeNode<E>>* children;
-            // Comparator* C; 
+            // Comparator* C;
+            TreeNode(){
+                data=E();
+            } 
             TreeNode(  E data) ;
             void addChildren(TreeNode N);
             void remove(TreeNode N);
+            void print();
     };
 
 #endif

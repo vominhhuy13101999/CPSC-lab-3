@@ -15,16 +15,13 @@ using namespace std;
 // }
 
 
-
-
-
-
-TreeNodeE::TreeNodeE(  Employee data): TreeNode<Employee>(data),data(data){
-      // this->data = data;
+// TreeNodeE::TreeNodeE(  Employee data): TreeNode<Employee>(data),data(data){
+  TreeNodeE::TreeNodeE(  Employee data){
+      this->data = data;
       // vector<TreeNodeE> a;
       this->children= new vector<TreeNodeE>();}
 
-void TreeNodeE::addChildren(TreeNodeE N){
+void TreeNodeE::addChildren(TreeNodeE& N){
     this->children->push_back(N);
 }
 
@@ -47,4 +44,15 @@ void TreeNodeE::remove(TreeNodeE N){
     else{
       children->erase(children->begin()+c);
     }
+}
+void TreeNodeE::print(){
+    cout<<"data: "<<data.str()<<endl;
+    cout<<"children: "<<endl;
+    vector<TreeNodeE> a=*children;
+    for (unsigned i=0; i<children->size(); ++i){
+        cout<<a[i].data.str()<<endl; 
+      
+    }
+
+
 }

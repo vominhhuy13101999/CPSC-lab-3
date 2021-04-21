@@ -4,6 +4,13 @@
 
 using namespace std;
 
+
+Employee::Employee(){
+     (this->name)= "";
+     (this->id)=0;
+     (this->position)="";
+
+}
 Employee::Employee(string name, int id , string position ){
     this-> name=name;
     this -> id=id;
@@ -42,4 +49,9 @@ int Employee::compareId(Employee e){
     // cout<<e.getId()<<endl;
     // cout<<id<<endl;
     return C->compare(this,&e);
+}
+void Employee::erase(){
+    (this->name)= "";
+     (this->id)=0;
+     (this->position)="";
 }
