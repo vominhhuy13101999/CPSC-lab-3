@@ -11,13 +11,14 @@ class Tree
 {
 
     public:
-        N<E>* head;
+        N* head;
         int len;
-        void clear();
-        void addchild(E manager, E newPerson);
+        void addRoot(E e);
+        void addChilden(E manager, E newPerson);
         void removeEmployee(E firedPerson);
-        void DFS(); 
-        void BFS();
+        N& DFS(E e,N* k,N* a); 
+        void printDFS(N* k);
+        void printBFS(N* k);
 };
 
 #endif

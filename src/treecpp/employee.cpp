@@ -50,3 +50,8 @@ int Employee::compareId(Employee e){
     // cout<<id<<endl;
     return C->compare(this,&e);
 }
+void Employee::erase(){
+    (this->name)= "";
+     (this->id)=0;
+     (this->position)="";
+}

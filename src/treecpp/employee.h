@@ -25,6 +25,7 @@ class Employee
         bool equals(Employee e);
         std::string str();
         int compareId(Employee e);
+        void erase();
         
 };
 

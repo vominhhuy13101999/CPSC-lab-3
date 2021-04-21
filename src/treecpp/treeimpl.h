@@ -7,17 +7,18 @@
 #include "TreeNode.h"
 #include "TreeNodeE.h"
 // using namespace std;
-class Treeimpl : public Tree<TreeNode<Employee>, Employee>
+class Treeimpl : public Tree<TreeNodeE, Employee>
 {
 
     public:
-        TreeNode<Employee>* head;
+        TreeNodeE* head;
+        int len=0;
         void addRoot(Employee e);
-        void clear();
-        void addDirectReport(Employee manager, Employee newPerson);
+        void addChildren(Employee manager, Employee newPerson);
         void removeEmployee(Employee firedPerson);
-        void DFS(); 
-        void BFS();
+        TreeNodeE& DFS(Employee e, TreeNodeE* N,TreeNodeE* final); 
+        void printDFS(TreeNodeE* N);
+        void printBFS(TreeNodeE* N);
 };
 
 #endif

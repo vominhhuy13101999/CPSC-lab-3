@@ -21,7 +21,7 @@ using namespace std;
       // vector<TreeNodeE> a;
       this->children= new vector<TreeNodeE>();}
 
-void TreeNodeE::addChildren(TreeNodeE N){
+void TreeNodeE::addChildren(TreeNodeE& N){
     this->children->push_back(N);
 }
 
