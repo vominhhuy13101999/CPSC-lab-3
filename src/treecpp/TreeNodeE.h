@@ -24,7 +24,7 @@ class TreeNodeE : public TreeNode<Employee>
         };
         TreeNodeE( Employee data) ;
         void addChildren(TreeNodeE& N);
-        void remove(TreeNodeE N);
+        void remove(TreeNodeE& N);
         void print();
 };
 

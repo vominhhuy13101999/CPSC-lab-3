@@ -32,11 +32,16 @@ void Treeimpl::addChildren(Employee manager, Employee newPerson){
 }
 
 
-void Treeimpl::removeEmployee(Employee firedPerson){
-    TreeNodeE* k= new TreeNodeE();
-    TreeNodeE* final= new TreeNodeE();
-    TreeNodeE N=DFS(firedPerson,k,final);
-    (N).data.erase();
+void Treeimpl::removeEmployee(Employee manager,Employee firedPerson){
+    // TreeNodeE* k= new TreeNodeE();
+    // TreeNodeE* final= new TreeNodeE();
+    // TreeNodeE& N=DFS(firedPerson,k,final);
+    // // (firedPerson).erase();
+    // Employee* p= &N.data;
+    // p->erase();
+    TreeNodeE& k=DFS(manager,new TreeNodeE(),new TreeNodeE());
+    TreeNodeE& k_junior=DFS(firedPerson,new TreeNodeE(),new TreeNodeE());
+    k.remove(k_junior);
 }
 
 TreeNodeE& Treeimpl::DFS(Employee e,TreeNodeE* N,TreeNodeE* final){

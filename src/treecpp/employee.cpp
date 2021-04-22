@@ -51,7 +51,7 @@ int Employee::compareId(Employee e){
     return C->compare(this,&e);
 }
 void Employee::erase(){
-    (this->name)= "";
+    (this->name)= " ";
      (this->id)=0;
-     (this->position)="";
+     (this->position)=" ";
 }

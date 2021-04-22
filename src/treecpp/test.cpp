@@ -11,12 +11,12 @@ using namespace std;
 // }
 
 int main(){
-    Employee a("Huy",215197,"CEO");
+    Employee a=Employee("Huy",215197,"CEO");
 
     Employee a1("Ana",1,"manager");
 
-    Employee a2("Billy",2,"manager");
-    Employee a3("Bow",3,"manager");
+    Employee a2=Employee("Billy",2,"manager");
+    Employee a3=Employee("Bow",3,"manager");
     Employee a4("Elize",4,"manager");
     Employee a5("Karma",5,"manager");
 
@@ -61,9 +61,23 @@ int main(){
     T.addChildren(a5,b10);
 
     // T.head->print();
-    T.removeEmployee(a2);
-    T.removeEmployee(a3);
 
-    T.printDFS(new TreeNodeE());
+    // TreeNode& Ta2=
+    // T.removeEmployee(a2);
+    // T.removeEmployee(a3);
+    
+    // TreeNodeE& k=T.DFS(a2,new TreeNodeE(),new TreeNodeE());
+    // TreeNodeE& k_junior=T.DFS(b2,new TreeNodeE(),new TreeNodeE());
+    T.removeEmployee(a2,b2);
+    T.removeEmployee(a3,b3);
+    T.removeEmployee(a5,b3);
+    // Employee* p= &k.data;
+    // p->erase();
+    // k.print();
+    // (T.DFS(a2,new TreeNodeE(),new TreeNodeE()).print());
+    // (T.DFS(a3,new TreeNodeE(),new TreeNodeE()).print());
+    // (T.DFS(a4,new TreeNodeE(),new TreeNodeE()).print());
+    T.printBFS(new TreeNodeE());
+
     }
     

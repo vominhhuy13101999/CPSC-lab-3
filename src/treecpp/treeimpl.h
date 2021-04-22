@@ -15,7 +15,8 @@ class Treeimpl : public Tree<TreeNodeE, Employee>
         int len=0;
         void addRoot(Employee e);
         void addChildren(Employee manager, Employee newPerson);
-        void removeEmployee(Employee firedPerson);
+        // void removeEmployee(Employee firedPerson);
+        void removeEmployee(Employee manager,Employee firedPerson);
         TreeNodeE& DFS(Employee e, TreeNodeE* N,TreeNodeE* final); 
         void printDFS(TreeNodeE* N);
         void printBFS(TreeNodeE* N);
