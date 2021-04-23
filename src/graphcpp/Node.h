@@ -13,11 +13,12 @@ class Node
     s value;
 	s getvalue();
 	// Node();
-	std::unordered_map<Node,e> edge;
-	e distance() const;
-	void removeNode(Node<s,e> n);
-	void addEdge(Node n, e weight);
-	bool operator==(Node<s,e> n);
+	std::unordered_map<Node*,e> edge;
+	void printEdge();
+	e distance(Node* n) const;
+	void removeEdge(Node<s,e>* n);
+	void addEdge(Node* n, e weight);
+	// bool operator==(Node<s,e>* n);
 
 };
 
