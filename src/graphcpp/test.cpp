@@ -136,18 +136,32 @@ int main(){
     // cout<<a.reachable(n6,n8)<<endl;
     cout<<"------------------------------------"<<endl;
 
+
+    // vector<MapNode*> l1;
+    // vector<MapNode*> bestl1;
+    // int b;
+    // int b1;
+    // vector<MapNode*> k1=a.shortestpath( n6, n8,bestl1,l1,b,b1);
+
+
     vector<MapNode*> l;
     vector<MapNode*> bestl;
-    vector<MapNode*> k=a.fewestHops( n6, n8,bestl,l);
+    vector<MapNode*> k=a.fewestHops( n7, n13,bestl,l);
+    cout<<k.size()<<endl;
 
     for (auto it = k.begin(); it != k.end(); ++it) {
          cout<<(**it).value<<endl;
-        // cout<<"------------------------------------"<<endl;
 
         }
 
 
 
+    vector<MapNode*> l1;
+    vector<MapNode*> bestl1;
+    int b;
+    int b1;
+    vector<MapNode*> k1=a.shortestpath( n7, n13,bestl1,l1,b,b1);
+    cout<<k1.size()<<endl;
 
 
 

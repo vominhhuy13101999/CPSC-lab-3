@@ -1,7 +1,5 @@
-all: Graph.exe
+all: Graph
 
-Graph.exe: test.o MapNode.o graph.o
-	g++ -std=c++14 test.o MapNode.o graph.o -o Graph.exe
-
-
-	
+Graph: 
+	# g++  MapNode.cpp graph.cpp test.cpp -o graph.exe -g
+	g++  MapNode.cpp graph.cpp test.cpp -o graph.exe

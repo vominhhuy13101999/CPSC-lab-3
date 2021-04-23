@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <iostream>
 
+
 void Graph::addNode(MapNode* n){
     NodeList.push_back(n);
 }
@@ -92,30 +93,25 @@ bool Graph::reachable(MapNode& n,MapNode& n1){
 
 std::vector<MapNode*> Graph::fewestHops(MapNode& n,MapNode& n1,std::vector<MapNode*>& bestl,std::vector<MapNode*> l){
     l.push_back(&n);
+    std::cout<<bestl.size()<<std::endl;
     if (n.getvalue()==n1.getvalue()){
         
         if (bestl.size()==0 || l.size()<bestl.size()){
             bestl=l;
+            return bestl;
         }
         
     }
     else{
 
         for (auto it = n.edge.begin(); it != n.edge.end();++it ) {
-            
-            bestl=fewestHops(*it->first,n1,bestl,l);
-
-            
+            if (InVector(it->first,l)){
+                continue;
+            }
+            fewestHops(*it->first,n1,bestl,l);       
     }
-
-
+        
     }
-
-    
-    
-    
-    
-    
     return bestl;
 }
 std::vector<MapNode*> Graph::shortestpath(MapNode& n,MapNode& n1,std::vector<MapNode*>& bestl,std::vector<MapNode*> l,int& best,int weight){
@@ -123,29 +119,23 @@ std::vector<MapNode*> Graph::shortestpath(MapNode& n,MapNode& n1,std::vector<Map
 
     if (n.getvalue()==n1.getvalue()){
         
-        if (best==0 || weight<best){
+        if (bestl.size()==0 || weight<best){
             bestl=l;
             best=weight;
-        }
-        
+        }        
     }
     else{
 
         for (auto it = n.edge.begin(); it != n.edge.end();++it ) {
+            if (InVector(it->first,l)){
+                continue;
+            }
             weight+=it->second;
-            bestl=shortestpath(*it->first,n1,bestl,l,best,weight);
-            weight-=it->second;
-
-            
-    }
-
-
+            shortestpath(*it->first,n1,bestl,l,best,weight);
+            weight-=it->second;         
     }
 
     
-    
-    
-    
-    
+    }
     return bestl;
-}
+    }
