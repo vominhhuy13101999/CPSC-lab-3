@@ -11,7 +11,7 @@ using namespace std;
 // }
 
 int main(){
-    Employee a=Employee("Huy",215197,"CEO");
+    Employee a=Employee("H",0,"CEO");
 
     Employee a1("Ana",1,"manager");
 
@@ -60,6 +60,16 @@ int main(){
     T.addChildren(a5,b5);
     T.addChildren(a5,b10);
 
+
+
+    cout<<"Depth first view"<<endl;
+    T.printDFS(new TreeNodeE());
+
+    cout<<"----------------------------"<<endl;
+    cout<<"Breath first view"<<endl;
+    T.printBFS(new TreeNodeE());
+    cout<<"----------------------------"<<endl;
+
     // T.head->print();
 
     // TreeNode& Ta2=
@@ -77,6 +87,13 @@ int main(){
     // (T.DFS(a2,new TreeNodeE(),new TreeNodeE()).print());
     // (T.DFS(a3,new TreeNodeE(),new TreeNodeE()).print());
     // (T.DFS(a4,new TreeNodeE(),new TreeNodeE()).print());
+    cout<<"----------------------------"<<endl;
+
+    cout<<"Depth first view"<<endl;
+    T.printDFS(new TreeNodeE());
+
+    cout<<"----------------------------"<<endl;
+    cout<<"Breath first view"<<endl;
     T.printBFS(new TreeNodeE());
 
     }
