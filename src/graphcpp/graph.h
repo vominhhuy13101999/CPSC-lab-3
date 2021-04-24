@@ -30,6 +30,7 @@ class Graph
 
     bool HasCycles();
 
+    int count_weight(std::vector<MapNode*> v);
     bool InVector(MapNode* n,std::vector<MapNode*>& l);
 
 

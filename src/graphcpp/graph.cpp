@@ -93,7 +93,7 @@ bool Graph::reachable(MapNode& n,MapNode& n1){
 
 std::vector<MapNode*> Graph::fewestHops(MapNode& n,MapNode& n1,std::vector<MapNode*>& bestl,std::vector<MapNode*> l){
     l.push_back(&n);
-    std::cout<<bestl.size()<<std::endl;
+    // std::cout<<bestl.size()<<std::endl;
     if (n.getvalue()==n1.getvalue()){
         
         if (bestl.size()==0 || l.size()<bestl.size()){
@@ -114,6 +114,20 @@ std::vector<MapNode*> Graph::fewestHops(MapNode& n,MapNode& n1,std::vector<MapNo
     }
     return bestl;
 }
+int Graph::count_weight(std::vector<MapNode*> v){
+    int weight=0;
+    if (v.size()==0){
+        return 0;
+    }
+    for (auto i = v.begin(); (i)!=v.end()-1;++i){
+        
+        weight+=(**i).edge[(*(i+1))];
+    }
+    return weight;
+}
+
+
+
 std::vector<MapNode*> Graph::shortestpath(MapNode& n,MapNode& n1,std::vector<MapNode*>& bestl,std::vector<MapNode*> l,int& best,int weight){
     l.push_back(&n);
 
@@ -139,3 +153,5 @@ std::vector<MapNode*> Graph::shortestpath(MapNode& n,MapNode& n1,std::vector<Map
     }
     return bestl;
     }
+
+
